@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+
+spring:
+#  activemq:
+#    broker-url: tcp://127.0.0.1:61616
+#    user: admin
+#    password: admin
+#  jms:
+#true：topic模式，false：queue模式
+#    pub-sub-domain: true
+
+activemq:
+  one:
+    brokerUrl: tcp://127.0.0.1:61616
+    user: system
+    password: manager
+    #true：topic模式，false：queue模式
+    pub-sub-domain: true
+  two:
+    brokerUrl: tcp://127.0.0.2:62626
+    user: system
+    password: manager
+    #true：topic模式，false：queue模式
+    pub-sub-domain: true
+#接收不同mq时用到
+msgListener:
+  oneMqName: one
+  twoMqName: two
+
+
